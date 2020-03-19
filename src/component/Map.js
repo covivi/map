@@ -2,7 +2,6 @@ import React,{ useState } from 'react'
 import MapGL, {GeolocateControl } from 'react-map-gl'
 
 import 'mapbox-gl/dist/mapbox-gl.css'
-import DraggableControl from "react-map-gl/dist/es5/components/draggable-control";
 
 const TOKEN='pk.eyJ1IjoiY292aXZpIiwiYSI6ImNrN3ozbzkzNTAwcWozZWxsNmZ4Zm01b2sifQ.Q1j83pq8CZGqDr8jiXSPLw'
 
@@ -10,13 +9,6 @@ const geolocateStyle = {
     float: 'left',
     margin: '50px',
     padding: '10px'
-};
-
-
-const DraggableControlStyle = {
-    float: 'left',
-    margin: '50px',
-    padding: '20px'
 };
 
 const Map = () => {
@@ -45,11 +37,6 @@ const Map = () => {
                     positionOptions={{enableHighAccuracy: true}}
                     trackUserLocation={true}
                 />
-
-                <DraggableControl
-                    style={DraggableControlStyle}
-                />
-
             </MapGL>
         </div>
     )
